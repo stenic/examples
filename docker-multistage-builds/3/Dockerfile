@@ -3,8 +3,8 @@ FROM golang:1.13.5-alpine AS build
 
 # Set the working directory
 WORKDIR /app
-# Add the source
-ADD main.go  /app
+# Copy the source
+COPY main.go  /app
 # Build the artifact
 RUN go build main.go
 

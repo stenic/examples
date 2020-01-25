@@ -6,7 +6,8 @@ NAME="docker-multistage"
 for d in $DIR/*/ ; do
     d="$(basename $d)"
     echo "Building $NAME:$d"
-    (cd "$DIR/$d" && docker build -t "$NAME:$d" . && docker run "$NAME:$d")
+    (cd "$DIR/$d" && docker build -t "$NAME:$d" .)
+    docker run "$NAME:$d"
 done
 
 docker images $NAME
