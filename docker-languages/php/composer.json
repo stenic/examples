@@ -1,0 +1,6 @@
+{
+    "name": "stenic/docker-languages-php",
+    "require": {
+        "monolog/monolog": "^2.0"
+    }
+}
